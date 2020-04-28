@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SchMaster.master.cs" Inherits="SchoolApp.SchMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <script src="Script/jquery-3.4.1.js"></script>
+    <script src="Script/jquery.prmenu.js"></script>
+    <link href="Css/dynamic.css" rel="stylesheet" />
+    <link href="Css/prmenu.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+    
+        
+        <ul id="top-menu">
+            <li><a href="Home.aspx">Home</a></li>
+            <li><a href="#">Master</a>
+                <ul>
+                    
+                    <li><a href="Master/Stream.aspx">STREAM</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li><a href="#">Transaction</a>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+            
+             <li><a href="LOGIN%20PAGE/LOGIN2.aspx">Log Out</a></li>
+        </ul>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#top-menu').prmenu();
+            });
+        </script>
+    </form>
+    <asp:ContentPlaceHolder ID="body" runat="server">
+        </asp:ContentPlaceHolder>
+</body>
+</html>

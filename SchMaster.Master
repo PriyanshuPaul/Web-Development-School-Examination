@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SchMaster.master.cs" Inherits="SchoolApp.SchMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <script src="Script/jquery-3.4.1.js"></script>
+    <script src="Script/jquery.prmenu.js"></script>
+    <link href="Css/dynamic.css" rel="stylesheet" />
+    <link href="Css/prmenu.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        div.prmenu_container ul.menu-toggle + ul {
+            top: 0px !important;
+        }
+    </style>
+</head>
+<body style="background-color: #FFFFCC">
+
+    <form id="form1" runat="server">
+        <div style="background-color: #663300; height: 88px;">
+            <div style="width: 80%; float: left; text-align: center; vertical-align: middle; font-size: 73px; font-weight: 600; color: #fff;">
+                ST JOSEPHS COLLEGE
+            </div>
+            <div style="vertical-align: bottom; color: #fff; text-align: right; padding-right: 10px;">
+                <a id="lnkLogin" runat="server" style="color: #fff;" href="LOGIN PAGE/LOGIN2.aspx">Log In</a>
+                <a id="lnkSignup" runat="server" style="color: #fff;" href="Signup.aspx">Sign Up</a>
+                <asp:Literal ID="ltMsg" runat="server" Text=""></asp:Literal>
+                <a id="lnkLogout" runat="server" style="color: #fff;" href="LogOut.aspx">Log Out</a>
+            </div>
+        </div>
+        <div>
+            <ul id="top-menu">
+                <li><a href="Home.aspx">Home</a></li>
+                <li><a href="#" id="ms" runat="server">Master</a>
+                    <ul>
+                        <li><a href="setQuesPaper.aspx">Question Paper</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                <li><a href="#" id="tr" runat="server">Transaction</a>
+                    <ul>
+                        <li><a href="testselection.aspx">Select Exam</a></li>
+                        
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+            
+                <li>
+                    <a href="#" id="rep" runat="server">REPORT</a>
+                    <ul>
+                        <li><a href="Report.aspx">RESULT</a></li>
+                    </ul>
+                </li>
+                <li><a href="photos.aspx">PHOTOS</a></li>
+                
+            
+                    <li><a href="Contacts.aspx">Contacts Us</a></li>
+            </ul>
+            
+
+
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#top-menu').prmenu();
+            });
+        </script>
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
